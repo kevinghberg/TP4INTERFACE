@@ -35,9 +35,10 @@ footer{
     margin-left: auto;
     background-repeat: no-repeat;
     background-image: url('../fondo.jpg');
-    background-size: 100%;
-    min-height: 512px;
+    background-size: cover;
+    min-height: 600px;
     min-width: 786px;
+    padding-top: 100px;
 }
 
 .index-main {
