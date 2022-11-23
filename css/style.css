@@ -36,9 +36,11 @@ footer{
     background-repeat: no-repeat;
     background-image: url('../fondo.jpg');
     background-size: 100%;
+    min-height: 512px;
+    min-width: 786px;
 }
 
-.main {
+.index-main {
     width: 400px;
     height: 600px;
     padding-top: 200px;
