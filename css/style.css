@@ -48,6 +48,13 @@ footer {
     margin-left: 58%;
 }
 
+.login-form {
+    width: 400px;
+    height: 600px;
+    margin-left: 58%;
+}
+
+
 .listado-adopcion {
     width: 400px;
     height: 600px;
@@ -256,7 +263,7 @@ i {
     display: block;
     text-align: center;
     color: #fff;
-    background-color:rgb(238, 127, 0);
+    background-color:#51A37E;
     padding: 2%;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
@@ -277,7 +284,9 @@ i {
     padding: 18px 8%;
     background-color: whitesmoke;
     transition: 0.8s ease;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    font-stretch: extra-condensed;
+    text-align: center;
 }
 
 .card:hover .card-desc {
@@ -325,7 +334,7 @@ i {
   }
   input:focus {
     outline: none !important;
-    border-bottom: 2px solid rgb(91, 243, 131);
+    border-bottom: 2px solid #51A37E;
     font-size: 17px;
     font-weight: bold;
     color: white;
@@ -345,23 +354,23 @@ i {
     width: 15px;
   }
   .text{
-    color: rgb(199, 197, 197);
+    color: whitesmoke;
     font-size: 13px;
   }
   .btn2{
     padding: 10px;
     width: 150px;
-    border-radius: 20px;
-    background-color: rgb(10, 136, 43);
+    background-color: #51A37E;
     border-style: none;
     color: white;
     font-weight: 600;
+
   }
   .btn2:hover{
     background-color: rgba(10, 136, 43, 0.5);
   }
   .btn-login button:hover{
-    border-bottom: 2px solid rgb(91, 243, 131);
+    border-bottom: 2px solid #51A37E;
   }
    
   /* hide signup form */
