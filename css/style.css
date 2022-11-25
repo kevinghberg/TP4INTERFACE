@@ -78,6 +78,23 @@ footer {
     
 }
 
+.infoAnimalDiv{
+    width: 400px;
+    height: 600px;
+   
+}
+
+.divInfo{
+    align-self: flex-start;
+}
+
+.imgInfoAnimal{
+    position: relative;
+    max-width: 250px;
+    max-height: 350px;
+    box-shadow: 0 40px 60px -6px black;
+}
+
 .botonesMain {
     text-align: -webkit-center;
 
@@ -102,7 +119,6 @@ nav.row.navbar.navbar-expand-lg.bg-light {
     margin-left: 50px;
     color: white;
     background-color: #333;
-   
     margin-top: 60px;
 }
 
@@ -297,6 +313,14 @@ i {
     box-shadow: 0 40px 60px -6px black;
 }
 
+.cardInfo{
+    position: relative;
+    max-width: 250px;
+    max-height: 350px;
+    box-shadow: 0 40px 60px -6px black;
+    top:11%;
+}
+
 .card-title {
     display: block;
     text-align: center;
@@ -320,7 +344,7 @@ i {
     top: 0;
     opacity: 0;
     padding: 18px 8%;
-    background-color: whitesmoke;
+    background-color: rgb(185, 29, 29);
     transition: 0.8s ease;
     font-weight: lighter;
     font-stretch: extra-condensed;

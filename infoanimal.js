@@ -41,6 +41,5 @@ fetch("datos/animales.json")
 
     const img = document.createElement("img");
     img.src = animal.imagen;
-    img.setAttribute("class", "card");
     fotoanimal.appendChild(img);
   });
