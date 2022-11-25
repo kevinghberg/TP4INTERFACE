@@ -37,6 +37,7 @@ fetch("datos/animales.json")
 
     const h22 = document.createElement("h2");
     h22.innerHTML = animal.nombre;
+    h22.setAttribute("class", "card-title flp");
     h2.appendChild(h22);
 
     const img = document.createElement("img");
