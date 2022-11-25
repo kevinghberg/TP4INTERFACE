@@ -44,7 +44,7 @@ footer {
 .index-main {
     width: 400px;
     height: 600px;
-    padding-top: 100px;
+    padding-top: 60px;
     margin-left: 58%;
 }
 
@@ -58,6 +58,10 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.txtBotonIndex{
+    color: red;
 }
 
 .mapaAbout:hover{
@@ -78,7 +82,9 @@ footer {
 }
 
 .logoHome{
-    margin-left: 30px;
+    margin-left: 20px;
+    color: whitesmoke;
+    font-size: 40px;
 }
 .infoAnimalDiv{
     width: 400px;
@@ -88,6 +94,11 @@ footer {
 
 .divInfo{
     align-self: flex-start;
+}
+
+.buttonIndex{
+    padding: 20px;
+    font-size: 40px;
 }
 
 .imgInfoAnimal{
@@ -135,6 +146,14 @@ nav.row.navbar.navbar-expand-lg.bg-light {
     font-weight: bolder;
 }
 
+h1{
+    font-size: 60px;
+    color: black;
+}
+
+.tituloAgregarPerro{
+    color: white;
+}
 
 /*  */
 
@@ -335,6 +354,7 @@ i {
 
 textarea{
     font-size: 10px;
+    resize: none;
 }
 .card img {
     object-fit: cover;
@@ -444,6 +464,12 @@ textarea{
   .btn-login button:hover{
     border-bottom: 2px solid #51A37E;
   }
+
+  .btn-login button:focus{
+    border-bottom: 2px solid #ffffff;
+  }
+
+ 
    
   /* hide signup form */
   .login{

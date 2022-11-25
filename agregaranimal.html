@@ -33,7 +33,7 @@
             <div class="col-6 d-flex justify-content-evenly flp" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="animales_adopcion.html">ADOPTA</a>
+                        <a class="nav-link" href="animales_adopcion.html">ADOPTÁ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">¿QUIENES SOMOS?</a>
@@ -45,11 +45,11 @@
             <!-- SESION -->
             <div class="flp">
                 <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <p>INGRESASTE COMO: Admin</p>
-                  </li>
+                    <li class="nav-item">
+                        <p>INGRESASTE COMO: Admin</p>
+                    </li>
                 </ul>
-              </div>
+            </div>
         </nav>
     </header>
 
@@ -58,7 +58,7 @@
             <div class="container-login">
                 <div class="form-login">
                     <div class="btn-login">
-                        <h1 class="flp ">AGREGAR PERRO</h1>
+                        <h1 class="flp tituloAgregarPerro">AGREGAR PERRO</h1>
 
                     </div>
                     <form class="signUp" action="" method="get">
@@ -71,15 +71,16 @@
 
                             <div class="select d-flex justify-content-around" tabindex="1">
                                 <div class="formGroup">
-                                    <input type="text" id="userName" placeholder="Sexo" autocomplete="off">
+                                  
                                 </div>
                                 <div><label for="opt1" class="option">Macho</label><input class="selectopt  "
                                         name="test" type="radio" id="opt1" checked>
 
                                 </div>
 
-                                <div><label for="opt1" class="option">Hembra</label><input class="selectopt "
-                                        name="test" type="radio" id="opt1" checked>
+                                <div>
+                                    <label for="opt1" class="option">Hembra</label>
+                                    <input class="selectopt " name="test" type="radio" id="opt1" checked>
                                 </div>
                             </div>
 
@@ -90,28 +91,27 @@
                                 min="0" value="meses">
                         </div>
                         <div class="formGroup">
-                            <input type="password" id="confirmPassword" placeholder="Descripcion" required
-                                autocomplete="off">
+                            <label for="descripionAgregar" class="option ">Descripción</label>
                         </div>
 
-                        
+
                         <div class="formGroup">
-                            <textarea name="" id="descripionAgregar" cols="50" rows="5"></textarea>
+                            <textarea name="" id="descripionAgregar" name="descripionAgregar" cols="50" rows="7"></textarea>
                         </div>
                         <div class="formGroup">
-                            <input type="file" id="confirmPassword" placeholder=""  required autocomplete="off"
-                                min="0" value="meses">
+                            <input type="file" id="confirmPassword" placeholder="" required autocomplete="off" min="0"
+                                value="meses">
                         </div>
-                        
-                        
+
+
                     </form>
 
 
                     <div class="formGroup">
                         <button type="button" class="btn2 bg-success bg-opacity-75 text-white flp mt-1">AGREGAR</button>
                     </div>
-                    
-                   
+
+
 
                 </div>
             </div>
