@@ -55,7 +55,7 @@ footer {
 .index-main {
     width: 400px;
     height: 600px;
-    padding-top: 60px;
+    padding-top: 50px;
     margin-left: 58%;
 }
 
@@ -79,7 +79,9 @@ footer {
     transform: scale(1.20);
 }
 
-
+#tituloperritos{
+    font-size: 50px;
+}
 
 .listado-adopcion {
     width: 400px;
