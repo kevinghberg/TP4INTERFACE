@@ -53,9 +53,8 @@
         </nav>
     </header>
 
-    <div id="background">
+    <div id="backtrans">
         <div class="login-form">
-            <div class="container-login">
                 <div class="form-login">
                     <div class="btn-login">
                         <h1 class="flp tituloAgregarPerro">AGREGAR PERRO</h1>
@@ -67,20 +66,17 @@
                         </div>
 
                         <div class="formGroup">
-
-
                             <div class="select d-flex justify-content-around" tabindex="1">
                                 <div class="formGroup">
-                                  
+                                    <input type="text" id="userName" placeholder="Sexo" autocomplete="off">
                                 </div>
                                 <div><label for="opt1" class="option">Macho</label><input class="selectopt  "
                                         name="test" type="radio" id="opt1" checked>
 
                                 </div>
 
-                                <div>
-                                    <label for="opt1" class="option">Hembra</label>
-                                    <input class="selectopt " name="test" type="radio" id="opt1" checked>
+                                <div><label for="opt1" class="option">Hembra</label><input class="selectopt "
+                                        name="test" type="radio" id="opt1" checked>
                                 </div>
                             </div>
 
@@ -91,19 +87,20 @@
                                 min="0" value="meses">
                         </div>
                         <div class="formGroup">
-                            <label for="descripionAgregar" class="option ">Descripción</label>
+                            <input type="password" id="confirmPassword" placeholder="Descripcion" required
+                                autocomplete="off">
                         </div>
 
 
                         <div class="formGroup">
-                            <textarea name="" id="descripionAgregar" name="descripionAgregar" cols="50" rows="7"></textarea>
+                            <textarea name="" id="descripionAgregar" cols="50" rows="5"></textarea>
                         </div>
                         <div class="formGroup">
-                            <input type="file" id="confirmPassword" placeholder="" required autocomplete="off" min="0"
-                                value="meses">
+                            <input type="file" id="confirmPassword" placeholder=""  required autocomplete="off"
+                                min="0" value="meses">
                         </div>
-
-
+                        
+                        
                     </form>
 
 
@@ -113,7 +110,6 @@
 
 
 
-                </div>
             </div>
         </div>
 
