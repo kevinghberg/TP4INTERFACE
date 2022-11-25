@@ -333,6 +333,9 @@ i {
     border-top-left-radius: 4px;
 }
 
+textarea{
+    font-size: 10px;
+}
 .card img {
     object-fit: cover;
     min-height: -webkit-fill-available;
