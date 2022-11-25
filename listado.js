@@ -17,9 +17,11 @@ fetch("datos/animales.json")
       h2.innerHTML = animales[index].nombre;
       element.appendChild(h2);
 
-      const p = document.createElement("p");
+
+      const p = document.createElement("a");
       p.setAttribute("class", "card-desc");
       p.innerHTML = animales[index].descripcion;
+      p.setAttribute("href", "infoanimal.html?id=" + animales[index].id);
       element.appendChild(p);
 
       const img = document.createElement("img");

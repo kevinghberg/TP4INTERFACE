@@ -1,20 +1,29 @@
 {
   "animal": [
     {
+      "id": 1,
       "nombre": "PEPA",
       "imagen": "pepa.jpg",
-      "descripcion": "Soy Pepa, tengo 4 meses y sufrí mucho de bebé. Ahora ya estoy lista para una familia.Estoy vacunada y desparasitada y mí hobby es jugar mucho."
+      "descripcion": "Soy Pepa, tengo 4 meses y sufrí mucho de bebé. Ahora ya estoy lista para una familia.Estoy vacunada y desparasitada y mí hobby es jugar mucho.",
+      "sexo": "Femenino",
+      "edad": "4 meses"
     },
     {
+      "id": 2,
       "nombre": "MIKEL",
       "imagen": "mikel.jpg",
-      "descripcion": "Soy Mikel, fui rescatado de la indiferencia de mis dueños, con muchos problemas de salud.Ya tengo 8 meses, soy super educado y cariñoso."
+      "descripcion": "Soy Mikel, fui rescatado de la indiferencia de mis dueños, con muchos problemas de salud.Ya tengo 8 meses, soy super educado y cariñoso.",
+      "sexo": "Masculino",
+      "edad": "8 meses"
     },
 
     {
+      "id": 3,
       "nombre": "JORGE",
       "imagen": "jorge.jpg",
-      "descripcion": "Soy Jorge, tengo aprox 1 año y medio, soy tamaño mediano, estoy en busca de una familia que me quiera mucho, mi vida no ha sido fácil. Soy super bueno, me gustan los mimos y me llevo bien con otros perros."
+      "descripcion": "Soy Jorge, tengo aprox 1 año y medio, soy tamaño mediano, estoy en busca de una familia que me quiera mucho, mi vida no ha sido fácil. Soy super bueno, me gustan los mimos y me llevo bien con otros perros.",
+      "sexo": "Masculino",
+      "edad": "Año y medio"
     }
   ]
 }
