@@ -5,6 +5,7 @@ const divInfo = document.getElementById("div-info");
 const ulInfo = document.getElementById("ul-info");
 const fotoanimal = document.getElementById("fotoanimal");
 const h2 = document.getElementById("h2");
+const linkwpp = document.getElementById("linkwpp");
 
 fetch("datos/animales.json")
   .then((response) => response.json())
@@ -16,7 +17,7 @@ fetch("datos/animales.json")
     let animal = animalito[0];
 
     console.log(animal);
-    
+
     const descli = document.createElement("li");
     const desc = document.createElement("p");
     desc.innerHTML = animal.descripcion;
@@ -43,4 +44,8 @@ fetch("datos/animales.json")
     const img = document.createElement("img");
     img.src = animal.imagen;
     fotoanimal.appendChild(img);
+
+    const textowpp = "Hola! Quisiera adoptar a " + animal.nombre;
+    const linkk = "https://wa.me/5492262516630?text=" + textowpp;
+    linkwpp.href = linkk;
   });
