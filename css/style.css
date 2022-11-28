@@ -69,7 +69,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 180px;
+    padding-bottom: 280px;
 }
 
 .txtBotonIndex {
@@ -105,7 +105,6 @@ footer {
 .infoAnimalDiv {
     width: 400px;
     height: 600px;
-
 }
 
 .divInfo {
@@ -157,7 +156,6 @@ nav.row.navbar.navbar-expand-lg.bg-light {
     color: whitesmoke;
     text-align: center;
     font-size: 25px;
-    margin-top: 60px;
     margin-left: 50px;
     font-weight: bolder;
 }
@@ -363,7 +361,7 @@ i {
     max-width: 250px;
     max-height: 350px;
     box-shadow: 0 40px 60px -6px black;
-    top: 11%;
+   
 }
 
 .card-title {
