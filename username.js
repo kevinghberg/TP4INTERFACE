@@ -12,13 +12,16 @@ let botonAbout = document.getElementById("botonAbout");
 if (username) {
   botonLogo.setAttribute("href", "index.html?username=" + username);
   botonHome.setAttribute("href", "index.html?username=" + username);
-  botonAdopta.setAttribute(
-    "href",
-    "animales_adopcion.html?username=" + username
-  );
+  if (botonAdopta) {
+    botonAdopta.setAttribute(
+      "href",
+      "animales_adopcion.html?username=" + username
+    );
+  
   botonAbout.setAttribute("href", "about.html?username=" + username);
 
   navLogin.remove();
+}
   if (username != "admin") {
     let ul = document.createElement("ul");
     let li = document.createElement("li");
@@ -42,9 +45,11 @@ if (username) {
     navLoginMayor.appendChild(ul);
     navLoginMayor.setAttribute("class", "flp col-2");
   } else {
-    botonAdopta.setAttribute("href", "agregaranimal.html?username=" + username);
-    botonAdopta.innerHTML = "PANEL DE ADMINISTRADOR";
-    botonAbout.remove();
+    if(botonAdopta){
+      botonAdopta.setAttribute("href", "agregaranimal.html?username=" + username);
+      botonAdopta.innerHTML = "PANEL DE ADMINISTRADOR";
+      botonAbout.remove();
+    }
     let ul = document.createElement("ul");
     let liloged = document.createElement("li");
     liloged.className = "nav-item";
