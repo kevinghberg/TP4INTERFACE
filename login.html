@@ -58,22 +58,25 @@
                   <button class="signUpBtn flp">REGISTRARSE</button>
                   <button class="loginBtn flp">INGRESAR</button>
                 </div>
-                <form class="signUp" action="" method="get"  id="registerForm">
+                <form class="signUp" action="" onsubmit="return validateRegister()" method="get" id="registerForm">
                   <div class="formGroup">
-                    <input type="text" id="username" placeholder="Nombre de Usuario" autocomplete="off">
+                    <input type="text" id="username" placeholder="Nombre de Usuario" required autocomplete="off">
                   </div>
                   <div class="formGroup">
-                    <input type="email" placeholder="Correo Electrónico" name="email" required autocomplete="off">
+                    <input type="email" id="email" placeholder="Correo Electrónico" name="email" required autocomplete="off">
                   </div>
                   <div class="formGroup">
-                    <input type="password" id="password" placeholder="Contraseña" required autocomplete="off">
+                    <input type="password" id="passwordRegister" placeholder="Contraseña" required autocomplete="off">
                   </div>
                   <div class="formGroup">
                     <input type="password" id="confirmPassword" placeholder="Confirmar Contraseña" required autocomplete="off">
                   </div>
                   <div class="formGroup">
-                    <button type="button" class="btn2 bg-success bg-opacity-75 text-white flp">REGISTRAR</button>
-                  </div>       
+                    <button type="sumbit" class="btn2 bg-success bg-opacity-75 text-white flp">REGISTRAR</button>
+                  </div>
+                  <div>
+                    <p class="mensaje-error" id="errorRegistro"></p>
+                  </div>
                 </form>         
                 <!------ Login Form -------- -->
                 
@@ -123,6 +126,19 @@
       }
       p.innerHTML = "Nombre de usuario o Contraseña invalido";
       return false;
+    }
+
+    function validateRegister() {
+      const registerForm = document.getElementById("registerForm");
+      const pRegistro = document.getElementById("errorRegistro");
+      pRegistro.style.color = 'red';
+      let passwordRegister = document.forms["registerForm"]["passwordRegister"].value;
+      let confirmPassword = document.forms["registerForm"]["confirmPassword"].value;
+
+      if (passwordRegister!=confirmPassword){
+        pRegistro.innerHTML = "Las contraseñas no coinciden";
+        return false;
+      }
     }
 
     
