@@ -1,169 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="css\style.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css\style.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>CAAN 🐶♥</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
+      <nav class="row navbar navbar-expand-lg bg-light">
+        <!-- LOGO -->
+        <div class="col-2">
+          <a id="botonLogo" class="navbar-brand" href="index.html">
+            <img src="CAAN.png" alt="Bootstrap" width="125" height="125" />
+          </a>
+        </div>
 
+        <!--  ITEMS -->
+        <div class="col-6 d-flex justify-content-evenly flp" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" id="botonHome" href="animales_adopcion.html"
+                >HOME</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">PANEL ADMINISTRADOR</a>
+            </li>
+          </ul>
+        </div>
 
-        <nav class="row navbar navbar-expand-lg bg-light">
-
-            <!-- LOGO -->
-            <div class="col-2">
-                <a id="botonLogo" class="navbar-brand" href="index.html">
-                    <img src="CAAN.png" alt="Bootstrap" width="125" height="125">
-
-                </a>
-            </div>
-
-
-            <!--  ITEMS -->
-            <div class="col-6 d-flex justify-content-evenly flp" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" id="botonHome" href="animales_adopcion.html">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">PANEL ADMINISTRADOR</a>
-                    </li>
-
-                </ul>
-            </div>
-
-            <!-- SESION -->
-            <div class="flp" id="navLoginMayor">
-                <ul class="navbar-nav" id="navLogin">
-                </ul>
-            </div>
-        </nav>
+        <!-- SESION -->
+        <div class="flp" id="navLoginMayor">
+          <ul class="navbar-nav" id="navLogin"></ul>
+        </div>
+      </nav>
     </header>
 
     <div id="backtrans">
-
-
-
-        <div class="login-form">
-
-            <div class="form-login">
-                <div class="btn-login">
-                    <h1 class="flp tituloAgregarPerro">AGREGAR PERRO</h1>
-
-                </div>
-                <form class="signUp" action="" method="get" onsubmit="return validateAnimal()" id="formAnimal">
-                    <div class="formGroup">
-                        <input type="text" id="userName" placeholder="Nombre" autocomplete="off">
-                    </div>
-
-                    <div class="formGroup">
-                        <div class="select d-flex justify-content-around" tabindex="1">
-                            <div><label for="opt1" class="option">Macho</label>
-                                <input class="selectopt" name="test" type="radio" id="opt1" checked>
-                            </div>
-                            <div><label for="opt1" class="option">Hembra</label>
-                                <input class="selectopt" name="test" type="radio" id="opt1" checked>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="formGroup">
-                        <input type="text" id="edad" placeholder="Edad" autocomplete="off">
-                    </div>
-
-                    <div class="formGroup">
-                        <label for="descripionAgregar">Descripcion</label>
-                    </div>
-
-
-                    <div class="formGroup">
-                        <textarea name="" id="descripionAgregar" name="descripionAgregar" cols="50" rows="5"
-                            class="m-2"></textarea>
-                    </div>
-                    <div class="formGroup">
-                        <label for="inputfile">Agrega una foto🐕</label>
-                        <input type="file" id="inputfile">
-                    </div>
-
-                </form>
-
-
-                <div class="formGroup">
-                    <button type="button" class="btn2 bg-success bg-opacity-75 text-white flp mt-1">AGREGAR</button>
-                    <div class="dashboard">
-                        <svg id="circuloValidacion">
-                            <circle class="meter-1" cx="35" cy="35" r="24" />
-                        </svg>
-                    </div>
-                </div>
-
-
-
+      <div class="login-form">
+        <div class="form-login">
+          <div class="btn-login">
+            <h1 class="flp tituloAgregarPerro">AGREGAR PERRO</h1>
+          </div>
+          <form
+            class="signUp"
+            onsubmit="return validateAnimal()"
+            id="formAnimal"
+          >
+            <div class="formGroup">
+              <input
+                type="text"
+                id="nombre"
+                placeholder="Nombre"
+                name="nombre"
+                autocomplete="off"
+              />
             </div>
-        </div>
 
+            <div class="formGroup">
+              <div class="select d-flex justify-content-around" tabindex="1">
+                <div>
+                  <label for="opt1" class="option">Macho</label>
+                  <input
+                    class="selectopt"
+                    type="radio"
+                    id="opt1"
+                    name="radios"
+                    unchecked
+                  />
+                </div>
+                <div>
+                  <label for="opt2" class="option">Hembra</label>
+                  <input
+                    class="selectopt"
+                    type="radio"
+                    id="opt2"
+                    name="radios"
+                    unchecked
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="formGroup">
+              <input
+                type="text"
+                id="edad"
+                name="edad"
+                placeholder="Edad"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="formGroup">
+              <label for="descripcion">Descripcion</label>
+            </div>
+
+            <div class="formGroup">
+              <textarea
+                id="descripcion"
+                name="descripcion"
+                cols="50"
+                rows="5"
+                class="m-2"
+              ></textarea>
+            </div>
+            <div class="formGroup">
+              <label for="inputfile">Agrega una foto🐕</label>
+              <input type="file" id="imagen" name="imagen" />
+            </div>
+
+            <div class="formGroup">
+              <button
+                type="submit"
+                class="btn2 bg-success bg-opacity-75 text-white flp mt-1"
+              >
+                AGREGAR
+              </button>
+              <div class="dashboard">
+                <p id="perror">   Campos vacios</p>
+                <svg>
+                  <circle
+                    class="meter-1"
+                    cx="35"
+                    cy="35"
+                    r="24"
+                    id="circuloValidacion"
+                  />
+                </svg>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
 
-    <footer class="p-3 ">
+    <footer class="p-3">
+      <div class="container"></div>
 
-        <div class="container"></div>
-
-        <p class="textoFooter">C.A.A.N NECOCHEA</p>
+      <p class="textoFooter">C.A.A.N NECOCHEA</p>
     </footer>
 
     <script src="jQuery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
     <script src="username.js"></script>
 
     <script>
-        function validateAnimal() {
-            const loginForm = document.getElementById("registerForm");
-            const p = document.getElementById("mensajeError");
-            let nombre = document.forms["loginForm"]["nombre"].value;
-            let edad = document.forms["loginForm"]["edad"].value;
-            let descripcion = document.forms["loginForm"]["edad"].value;
-            let imagen = document.forms["loginForm"]["imagen"].value;
-            let error = false;
+      const circuloValidacion = document.getElementById("circuloValidacion");
+      const perror = document.getElementById("perror");
+      perror.style.visibility = "hidden";
+      perror.style.color = "red";
+      circuloValidacion.style.webkitAnimation = "none";
+      circuloValidacion.style.visibility = "hidden";
 
-            let svg = document.createElement('svg')
-            let circle = document.createElement('circle')
+      function resetear() {
+        var el = document.getElementById("circuloValidacion");
+        circuloValidacion.style.webkitAnimation = "";
+        circuloValidacion.style.visibility = "visible";
+        el.style.animation = "none";
+        el.offsetHeight; /* trigger reflow */
+        el.style.animation = null;
+      }
 
-            circle.className = "meter-1";
-            svg.appendChild(circle);
+      function validateAnimal() {
+        const nombre = document.forms["formAnimal"]["nombre"].value;
+        const edad = document.forms["formAnimal"]["edad"].value;
+        const descripcion = document.forms["formAnimal"]["descripcion"].value;
+        const imagen = document.forms["formAnimal"]["imagen"].value;
+        const radio1 = document.getElementById("opt1");
+        const radio2 = document.getElementById("opt2");
 
-            if (nombre.length < 1) {
-                error = true;
-            }
-            if (edad.length > 0) {
-                error = true;
-            }
-            if (descripcion.length > 0) {
-                error = true;
-            }
-            if (imagen == "") {
-                error = true;
-            }
+        let error = false;
 
-            if (error) {
-                p.innerHTML = "Campos sin completar.";
-            }
-            return false;
+        if (radio1.checked || radio2.checked) {
+        } else {
+          error = true;
         }
+
+        if (nombre.length < 1) {
+          error = true;
+        }
+
+        if (edad.length < 1) {
+          error = true;
+        }
+
+        if (descripcion.length < 1) {
+          error = true;
+        }
+
+        if (imagen == "") {
+          error = true;
+        }
+
+        if (error == true) {
+          perror.style.visibility = "visible";
+        } else {
+          perror.remove();
+          resetear();
+        }
+        return false;
+      }
     </script>
-
-</body>
-
+  </body>
 </html>
