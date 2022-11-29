@@ -1,3 +1,11 @@
+let userparam = new URLSearchParams(window.location.search).get("username");
+if (userparam){
+  let botonHomeAdopta = document.getElementById("botonHomeAdopta");
+  let botonHomeUnite = document.getElementById("botonHomeUnite");
+  botonHomeAdopta.setAttribute("href","animales_adopcion.html?username="+userparam);
+  botonHomeUnite.remove();
+}
+
 fetch("datos/animales.json")
   .then((response) => response.json())
   .then((json) => {
@@ -25,19 +33,37 @@ fetch("datos/animales.json")
         P INNERHTML
         APPEANDAR P > cartapicho*/
 
-      const h3 = document.createElement("h3");
-      const a = document.createElement("a");
-      const p = document.createElement("a");
+      let h3 = document.createElement("h3");
+      let a = document.createElement("a");
+      let p = document.createElement("a");
+      let userp = new URLSearchParams(window.location.search).get("username");
 
-      a.setAttribute("href", "infoanimal.html?id=" + animales[index].id);
+      if (userp) {
+        a.setAttribute(
+          "href",
+          "infoanimal.html?id=" + animales[index].id + "&username=" + userp
+        );
+      } else {
+        a.setAttribute("href", "infoanimal.html?id=" + animales[index].id);
+      }
+
       a.setAttribute("class", "linkpicho");
       a.innerHTML = "→" + animales[index].nombre + "←";
       h3.appendChild(a);
       element.appendChild(h3);
       p.setAttribute("class", "textopicho");
-      let stringDescripcion = animales[index].descripcion ;
+      let stringDescripcion = animales[index].descripcion;
       p.innerHTML = stringDescripcion.slice(0, 80) + "... ¡Seguir leyendo!";
-      p.setAttribute("href", "infoanimal.html?id=" + animales[index].id);
+
+      if (userp) {
+        p.setAttribute(
+          "href",
+          "infoanimal.html?id=" + animales[index].id + "&username=" + userp
+        );
+      } else {
+        p.setAttribute("href", "infoanimal.html?id=" + animales[index].id);
+      }
+
       element.appendChild(p);
     });
   });

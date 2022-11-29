@@ -18,7 +18,7 @@
         <nav class="row navbar navbar-expand-lg bg-light">
             <!-- LOGO -->
             <div class="col-2">
-                <a id="logo" class="navbar-brand" href="index.html">
+                <a id="botonLogo" class="navbar-brand" href="index.html">
                     <img src="CAAN.png" alt="Bootstrap" width="125" height="125">                    
                 </a>
             </div>
@@ -32,22 +32,22 @@
                         <a class="nav-link" href="animales_adopcion.html">ADOPTÁ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">¿QUIENES SOMOS?</a>
+                        <a class="nav-link" href="about.html">¿QUIENES SOMOS?</a>
                     </li>
                 </ul>
             </div>
             <!-- SESION -->
-            <div class="col-2 flp">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link bg-success bg-opacity-50" href="#">
-                            INGRESAR</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link bg-success bg-opacity-75 text-white" href="#">REGISTRARSE</a>
-                    </li>
-                </ul>
-            </div>
+            <div class="col-2 flp" id="navLoginMayor">
+              <ul class="navbar-nav" id="navLogin">
+                  <li class="nav-item">
+                      <a class="nav-link bg-success bg-opacity-50" href="login.html">
+                          INGRESAR</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link bg-success bg-opacity-75 text-white" href="login.html">REGISTRARSE</a>
+                  </li>
+              </ul>
+          </div>
         </nav>
     </header>
     <div id="backtrans">
@@ -60,34 +60,37 @@
                 </div>
                 <form class="signUp" action="" method="get">
                   <div class="formGroup">
-                    <input type="text" id="userName" placeholder="User Name" autocomplete="off">
+                    <input type="text" id="username" placeholder="Nombre de Usuario" autocomplete="off">
                   </div>
                   <div class="formGroup">
-                    <input type="email" placeholder="Email ID" name="email" required autocomplete="off">
+                    <input type="email" placeholder="Correo Electrónico" name="email" required autocomplete="off">
                   </div>
                   <div class="formGroup">
-                    <input type="password" id="password" placeholder="Password" required autocomplete="off">
+                    <input type="password" id="password" placeholder="Contraseña" required autocomplete="off">
                   </div>
                   <div class="formGroup">
-                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required autocomplete="off">
+                    <input type="password" id="confirmPassword" placeholder="Confirmar Contraseña" required autocomplete="off">
                   </div>
                   <div class="formGroup">
                     <button type="button" class="btn2 bg-success bg-opacity-75 text-white flp">REGISTRAR</button>
                   </div>       
                 </form>         
                 <!------ Login Form -------- -->
-                <form class="login" action="" method="get">         
-                  <div class="formGroup">
-                    <input type="email" placeholder="Email ID" name="email" required autocomplete="off">
-                  </div>
-                  <div class="formGroup">
-                    <input type="password" id="password" placeholder="Password" required autocomplete="off">                 
-                  </div>
-                  <div class="formGroup">
-                    <a href="agregaranimal.html"><button type="button" class="btn2 bg-success bg-opacity-75 text-white flp">INGRESAR</button></a>
-                  </div>
                 
-                </form>   
+                <form class="login" name="loginForm" action="" method="get" onsubmit="return validateForm()" id="loginForm">         
+                  <div class="formGroup">
+                    <input type="username" placeholder="Nombre de Usuario" name="username" required autocomplete="off">
+                  </div>
+                  <div class="formGroup">
+                    <input type="password" id="password" placeholder="Contraseña" name="password" required autocomplete="off">                 
+                  </div>
+                  <div class="formGroup">
+                    <button type="submit" class="btn2 bg-success bg-opacity-75 text-white flp">INGRESAR</button></a>
+                  </div>
+                  <div>
+                    <p class="mensaje-error" id="mensajeError">
+                    </p></div>
+                </form>
               </div>
               </div>
         </div>      
@@ -104,6 +107,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+    <script>
+    function validateForm() {
+      const loginForm = document.getElementById("loginForm");
+      const p = document.getElementById("mensajeError");
+      let username = document.forms["loginForm"]["username"].value;
+      let password = document.forms["loginForm"]["password"].value;
+      if (username == "user" && password == "1234"){
+        loginForm.setAttribute("action","/animales_adopcion.html")
+        return true;
+      }
+      if (username == "admin" && password == "admin") {
+        loginForm.setAttribute("action","/agregaranimal.html")
+        return true;
+      }
+      p.innerHTML = "Nombre de usuario o Contraseña invalido";
+      return false;
+    }
+    </script>
+        
 </body>
 
 </html>

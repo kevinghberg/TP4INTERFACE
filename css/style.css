@@ -8,7 +8,15 @@ body {
     margin-right: 25%;
 }
 
-#logo {
+ul {
+    list-style-type: none;
+}
+
+il {
+    list-style-type: none;
+}
+
+#botonLogo {
     position: fixed;
     top: 10px;
 }

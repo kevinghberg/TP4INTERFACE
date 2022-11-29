@@ -12,19 +12,24 @@ fetch("datos/animales.json")
       index,
       array
     ) {
-      const h2 = document.createElement("h2");
+      let h2 = document.createElement("h2");
       h2.setAttribute("class", "card-title flp");
       h2.innerHTML = animales[index].nombre;
       element.appendChild(h2);
 
-
-      const p = document.createElement("a");
+      let p = document.createElement("a");
       p.setAttribute("class", "card-desc");
       p.innerHTML = animales[index].descripcion;
-      p.setAttribute("href", "infoanimal.html?id=" + animales[index].id);
+
+      if (username) {
+        p.setAttribute("href",("infoanimal.html?id=" + animales[index].id + "&username=" + username)
+        );
+      } else {
+        p.setAttribute("href", "infoanimal.html?id=" + animales[index].id);
+      }
       element.appendChild(p);
 
-      const img = document.createElement("img");
+      let img = document.createElement("img");
       img.src = animales[index].imagen;
       element.appendChild(img);
     });

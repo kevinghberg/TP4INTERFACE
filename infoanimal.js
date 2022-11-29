@@ -1,11 +1,11 @@
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const idurl = urlParams.get("id");
-const divInfo = document.getElementById("div-info");
-const ulInfo = document.getElementById("ul-info");
-const fotoanimal = document.getElementById("fotoanimal");
-const h2 = document.getElementById("h2");
-const linkwpp = document.getElementById("linkwpp");
+let queryString = window.location.search;
+let urlParams = new URLSearchParams(queryString);
+let idurl = urlParams.get("id");
+let divInfo = document.getElementById("div-info");
+let ulInfo = document.getElementById("ul-info");
+let fotoanimal = document.getElementById("fotoanimal");
+let h2 = document.getElementById("h2");
+let linkwpp = document.getElementById("linkwpp");
 
 fetch("datos/animales.json")
   .then((response) => response.json())
@@ -18,34 +18,34 @@ fetch("datos/animales.json")
 
     console.log(animal);
 
-    const descli = document.createElement("li");
-    const desc = document.createElement("p");
+    let descli = document.createElement("li");
+    let desc = document.createElement("p");
     desc.innerHTML = animal.descripcion;
     descli.appendChild(desc);
     ulInfo.appendChild(descli);
 
-    const edadli = document.createElement("li");
-    const edad = document.createElement("p");
+    let edadli = document.createElement("li");
+    let edad = document.createElement("p");
     edad.innerHTML = animal.edad;
     edadli.appendChild(edad);
     ulInfo.appendChild(edadli);
 
-    const sexoli = document.createElement("li");
-    const sexo = document.createElement("p");
+    let sexoli = document.createElement("li");
+    let sexo = document.createElement("p");
     sexo.innerHTML = animal.sexo;
     sexoli.appendChild(sexo);
     ulInfo.appendChild(sexoli);
 
-    const h22 = document.createElement("h2");
+    let h22 = document.createElement("h2");
     h22.innerHTML = animal.nombre;
     h22.setAttribute("class", "card-title flp");
     h2.appendChild(h22);
 
-    const img = document.createElement("img");
+    let img = document.createElement("img");
     img.src = animal.imagen;
     fotoanimal.appendChild(img);
 
-    const textowpp = "Hola! Quisiera adoptar a " + animal.nombre;
-    const linkk = "https://wa.me/5492262516630?text=" + textowpp;
+    let textowpp = "Hola! Quisiera adoptar a " + animal.nombre;
+    let linkk = "https://wa.me/5492262516630?text=" + textowpp;
     linkwpp.href = linkk;
   });

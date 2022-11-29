@@ -26,9 +26,8 @@
       <nav class="row navbar navbar-expand-lg bg-light">
         <!-- LOGO -->
         <div class="col-2">
-          <a id="logo" class="navbar-brand" href="index.html">
+          <a id="botonLogo" class="navbar-brand" href="index.html">
             <img src="CAAN.png" alt="Bootstrap" width="125" height="125" />
-  
           </a>
         </div>
 
@@ -36,22 +35,37 @@
         <div class="col-6 d-flex justify-content-evenly flp" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="animales_adopcion.html">HOME</a>
-          </li>
-            <li class="nav-item">
-              <a class="nav-link" href="animales_adopcion.html">ADOPTÁ</a>
+              <a id="botonHome" class="nav-link" href="animales_adopcion.html"
+                >HOME</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">¿QUIENES SOMOS?</a>
+              <a id="botonAdopta" class="nav-link" href="animales_adopcion.html"
+                >ADOPTÁ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a id="botonAbout" class="nav-link" href="about.html"
+                >¿QUIENES SOMOS?</a
+              >
             </li>
           </ul>
         </div>
 
         <!-- SESION -->
-        <div class="flp">
-          <ul class="navbar-nav">
+        <div class="col-2 flp" id="navLoginMayor">
+          <ul class="navbar-nav" id="navLogin">
             <li class="nav-item">
-              <p>INGRESASTE COMO: user</p>
+              <a class="nav-link bg-success bg-opacity-50" href="login.html">
+                INGRESAR</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link bg-success bg-opacity-75 text-white"
+                href="login.html"
+                >REGISTRARSE</a
+              >
             </li>
           </ul>
         </div>
@@ -64,8 +78,15 @@
         <div class="col-6 txtAbout divInfo" id="div-info">
           <h2 id="h2"></h2>
           <ul id="ul-info"></ul>
-          <a id="linkwpp"><button type="button"
-            class="btn btn-success bg-success bg-opacity-70 btn-lg mb-1 flp" href="https://walink.co/cf6a37">ADOPTAME ♥</button></a>
+          <a id="linkwpp"
+            ><button
+              type="button"
+              class="btn btn-success bg-success bg-opacity-70 btn-lg mb-1 flp"
+              href="https://walink.co/cf6a37"
+            >
+              ADOPTAME ♥
+            </button></a
+          >
         </div>
       </div>
     </div>
@@ -73,11 +94,13 @@
     <footer class="p-3">
       <p class="textoFooter">C.A.A.N NECOCHEA</p>
     </footer>
+    <script src="username.js"></script>
     <script src="infoanimal.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+
   </body>
 </html>
